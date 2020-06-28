@@ -14,12 +14,14 @@ if password:
     tn.write(password.encode('ascii') + b"\n")
 
 tn.write(b"enable\n")
-tn.write(b"<enable-password / enable-secret>\n")
+tn.write(b"<enable-secret | enable-password>\n")
+tn.write(b"conf t\n")
 
-for vlan in vlans (2,11):
-    tn.write(b"vlan " + str(vlan).encode('ascii') + b"\n")
-    tn.write(b"name Python_VLAN_" + str(vlan).encode('ascii') + b"\n")
+for n in range (2,11): #Number of VLANs to create.
+    tn.write(b"vlan " + str(n).encode('ascii') + b"\n")
+    tn.write(b"name Python_VLAN_" + str(n).encode('ascii') + b"\n") #Appending VLAN No. to Python_VLAN_*
 
 tn.write(b"end\n")
-tn.write(b"wr\n")
 tn.write(b"exit\n")
+
+print(tn.read_all().decode('ascii'))
