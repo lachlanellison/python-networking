@@ -1,0 +1,46 @@
+R1#debug telnet 
+Incoming Telnet debugging is on
+R1#
+*Jun 28 04:33:34.901: Telnet2: 1 1 251 1
+*Jun 28 04:33:34.901: TCP2: Telnet sent WILL ECHO (1)
+*Jun 28 04:33:34.901: Telnet2: 2 2 251 3
+*Jun 28 04:33:34.901: TCP2: Telnet sent WILL SUPPRESS-GA (3)
+*Jun 28 04:33:34.901: Telnet2: 80000 80000 253 24
+*Jun 28 04:33:34.901: TCP2: Telnet sent DO TTY-TYPE (24)
+*Jun 28 04:33:34.901: Telnet2: 10000000 10000000 253 31
+*Jun 28 04:33:34.901: TCP2: Telnet sent DO WINDOW-SIZE (31)
+*Jun 28 04:33:34.903: TCP2: Telnet received DONT ECHO (1)
+*Jun 28 04:33:34.903: TCP2: Telnet sent WONT ECHO (1)
+*Jun 28 04:33:34.905: TCP2: Telnet received DONT SUPPRESS-GA (3)
+*Jun 28 04:33:34.905: TCP2: Telnet sent WONT SUPPRESS-GA (3)
+R1#
+*Jun 28 04:33:34.905: TCP2: Telnet received WONT TTY-TYPE (24)
+*Jun 28 04:33:34.905: TCP2: Telnet sent DONT TTY-TYPE (24)
+*Jun 28 04:33:34.905: TCP2: Telnet received WONT WINDOW-SIZE (31)
+*Jun 28 04:33:34.905: TCP2: Telnet sent DONT WINDOW-SIZE (31)
+*Jun 28 04:33:34.911: TCP2: Telnet received DONT ECHO (1)
+*Jun 28 04:33:34.911: TCP2: Telnet received DONT SUPPRESS-GA (3)
+*Jun 28 04:33:34.911: TCP2: Telnet received WONT TTY-TYPE (24)
+*Jun 28 04:33:34.911: TCP2: Telnet received WONT WINDOW-SIZE (31)
+*Jun 28 04:33:35.257: %SYS-5-CONFIG_I: Configured from console by lachlan on vty0 (192.168.122.183)
+*Jun 28 04:33:36.123: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+R1#show ip int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                192.168.122.70  YES manual up                    up      
+Ethernet0/1                unassigned      YES NVRAM  administratively down down    
+Ethernet0/2                unassigned      YES NVRAM  administratively down down    
+Ethernet0/3                unassigned      YES NVRAM  administratively down down    
+Ethernet1/0                unassigned      YES NVRAM  administratively down down    
+Ethernet1/1                unassigned      YES NVRAM  administratively down down    
+Ethernet1/2                unassigned      YES NVRAM  administratively down down    
+Ethernet1/3                unassigned      YES NVRAM  administratively down down    
+Serial2/0                  unassigned      YES NVRAM  administratively down down    
+Serial2/1                  unassigned      YES NVRAM  administratively down down    
+Serial2/2                  unassigned      YES NVRAM  administratively down down    
+Serial2/3                  unassigned      YES NVRAM  administratively down down    
+Serial3/0                  unassigned      YES NVRAM  administratively down down    
+Serial3/1                  unassigned      YES NVRAM  administratively down down    
+Serial3/2                  unassigned      YES NVRAM  administratively down down    
+Serial3/3                  unassigned      YES NVRAM  administratively down down    
+Loopback0                  1.1.1.1         YES manual up                    up      
+R1#
